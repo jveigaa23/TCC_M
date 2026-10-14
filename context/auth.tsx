@@ -340,7 +340,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const paciente = await PacientesAPI.updateMe(payload);
         updated = pacienteToUser(paciente);
       } catch (e: any) {
-        setError(e.message || 'NÃ£o foi possÃ­vel salvar seu perfil.');
+        setError(e.message || 'Não foi possível salvar seu perfil.');
         throw e;
       } finally {
         setLoading(false);
