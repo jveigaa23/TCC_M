@@ -13,4 +13,3 @@ expo-env.d.ts
 dist/
 .expo/
 .expo-export-check/
-backend/target/

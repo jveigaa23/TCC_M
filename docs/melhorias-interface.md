@@ -40,9 +40,11 @@
 - Mensagem de erro com acentuação corrompida em `context/auth.tsx`.
 - Em navegador (web), `Alert.alert` não aparece. No Perfil, os erros passaram a usar o aviso temporário.
 
+## Sessão
+- O login agora é mantido entre aberturas do app. O token fica guardado no armazenamento seguro do aparelho (`expo-secure-store`) e é apagado ao sair.
+
 ## Pendências que dependem da API ou de funcionalidade nova
 - **Cancelar uma solicitação pendente**: não existe endpoint. O paciente fica aguardando até o nutricionista responder.
 - **Recusa ou encerramento**: a API devolve o paciente ao modo solo sem guardar o motivo nem a data. Por isso o app não consegue mostrar "solicitação recusada" ou "vínculo encerrado".
 - **Notificações**: ficam só em memória e se perdem ao fechar o app.
-- **Sessão**: o token não é salvo. Ao recarregar o app (ou a página, na web), é preciso entrar de novo.
 - **Anos de experiência, áreas de atuação e formas de atendimento**: só existem nos perfis de demonstração. A API não tem esses campos.
